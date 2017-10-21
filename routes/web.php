@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => config('url-route.show_locale') ? [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ] : []
+], function()
+{
+    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+    Route::get('/', function()
+    {
+//        return config('url-route.show_locale') ? 'true' : 'false';
+        return view('welcome');
+    });
+
+    Route::get('test',function(){
+        return 'test';
+    });
 });

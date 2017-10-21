@@ -2,12 +2,17 @@
 
 เว็บไซต์เพื่อการศึกษาและใช้ในชมรมสุนันทาลัย มหาวิทยาลัยราชภัฏสวนสุนันทา
 
+## require
+
+- PHP version 5.6
+- MySQL version 
+
 ## Config
 
-| create `.env` file in project
+| create `.env` file in project or rename `.env.example` to `.env`
 
 ```dotenv
-APP_NAME=Laravel
+APP_NAME=SunandhalaiClub
 APP_ENV=local
 APP_KEY=base64:6IxQPZ0v6hTau2SDCPbIDah8TF6DmgZC/L/6xdkf6xI=
 APP_DEBUG=true
